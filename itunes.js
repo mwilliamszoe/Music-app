@@ -1,24 +1,57 @@
-// this is the submit button
-let searchBtn = document.querySelector('.search-btn') 
-
-// this is the submit form
-let searchBox = document.querySelector('.search-box')
 
 // this is for the entire form box
-let formBox = document.querySelector('.form-box')
+const formBox = document.querySelector('.form-box')
 
-// searchBtn.addEventListener('click', submitFunc);
+// this is the submit button
+const searchBtn = document.querySelector('.search-btn') 
 
-// function submitFunc() {
-//     console.log('submit');
-// }
+// this is the text search box
+let searchBox = document.querySelector('.search-box');
 
-let nameInput = document.getElementById('name');
-
-formBox.addEventListener('submit', function (e)  {
-
+formBox.addEventListener('submit', function (e) {
     e.preventDefault();
+    // console.log(searchBox.value);
+    let userInput = searchBox.value;
+    // console.log(userInput)
+    let url = `https://itunes.apple.com/search?term=${userInput}`
+    console.log(url)
+     
 
-    console.log(nameInput.value);    
-});
+}); 
 
+
+
+
+
+// this is the text box
+// let searchBoxOne = document.querySelector('.search-box')
+// let searchBoxTwo = document.getElementById('#search-box')
+
+// let userInput = searchBox.value
+
+
+
+
+// formBox.addEventListener('submit', function (e) {
+
+//     //prevent the normal submission of the form
+//     e.preventDefault();
+
+//     console.log(searchBoxOne);    
+// });
+
+
+/* <form class="pure-form">
+    <input id="name" type="text" placeholder="Enter Name" />
+    <button type="submit"><i class="fa fa-chevron-circle-right"></i></button>
+</form> */
+
+// var nameInput = document.getElementById('name');
+
+// document.querySelector('form.pure-form').addEventListener('submit', function (e) {
+
+//     //prevent the normal submission of the form
+//     e.preventDefault();
+
+//     console.log(nameInput.value);    
+// });

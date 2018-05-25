@@ -14,8 +14,19 @@ formBox.addEventListener('submit', function (e) {
     let userInput = searchBox.value;
     // console.log(userInput)
     let url = `https://itunes.apple.com/search?term=${userInput}`
-    console.log(url)
+    // console.log(url)
      
+    fetch(url)
+    .then(
+        function (response){
+            return response.json()
+        }
+    )
+    .then (
+        function(data) {
+            console.log(data)
+        }
+    )
 
 }); 
 

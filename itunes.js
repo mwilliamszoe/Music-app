@@ -1,4 +1,6 @@
 
+const display = document.querySelector('.search-results')
+
 // this is for the entire form box
 const formBox = document.querySelector('.form-box')
 
@@ -24,7 +26,23 @@ formBox.addEventListener('submit', function (e) {
     )
     .then (
         function(data) {
-            console.log(data)
+            // console.log(data)
+            let info = data.results
+                // console.log(info)
+            for (i=0; i<info.length; i++) {
+                console.log(info.trackName)
+            }
+            
+        
+        // const results = 
+        // `
+        // <div>
+        //     <h1>Song: ${info.trackName}</h1>
+        //     <h1>Artist: ${info.artistName}</h2>
+        // </div>
+        // `
+        
+        // display.insertAdjacentHTML('beforeend', results)
         }
     )
 

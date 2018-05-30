@@ -10,13 +10,15 @@ const searchBtn = document.querySelector('.search-btn')
 // this is the text search box
 let searchBox = document.querySelector('.search-box');
 
+const error = document.querySelector('.error');
+
 formBox.addEventListener('submit', function (e) {
     e.preventDefault();
     // console.log(searchBox.value);
     let userInput = searchBox.value;
     // console.log(userInput)
     let url = `https://itunes.apple.com/search?term=${userInput}`
-    // console.log(url)
+    // console.log(url, "url")
      
     fetch(url)
     .then(
@@ -26,27 +28,43 @@ formBox.addEventListener('submit', function (e) {
     )
     .then (
         function(data) {
-            // console.log(data)
+            // console.log(data, "data")
+            // info is the array of data.results
             let info = data.results
-                // console.log(info)
-            for (i=0; i<info.length; i++) {
-                console.log(info.trackName)
+                // console.log(info, "info")
+            // for (i=0; i<info.length; i++)
+            // find a way to identify incorrect userInputs
+            if (userInput === '' || userInput === '' || userInput === '' ) {
+                console.log('error')
+                error.textContent = 'Not Found'
+            }
+
+            for (i=0; i<5; i++) {
+                // console.log(info[i], "array of info")
+                // tracks is all the stuff inside the info array
+                let tracks = info[i]
+                // console.log(tracks, "tracks")
+                const searchList = 
+                `
+                <div>
+                    <h4>Song: ${tracks.trackName}</h4>
+                    <h4>Listen: <button class='music-url'>${tracks.previewUrl}</button></h4>
+                </div>
+                `
+                display.insertAdjacentHTML('beforeend', searchList)
+                
             }
             
-        
-        // const results = 
-        // `
-        // <div>
-        //     <h1>Song: ${info.trackName}</h1>
-        //     <h1>Artist: ${info.artistName}</h2>
-        // </div>
-        // `
-        
-        // display.insertAdjacentHTML('beforeend', results)
         }
     )
 
 }); 
+
+let music = document.querySelector('.music-url');
+
+
+// when button is clicked audio player plays url from track
+// when 'play' button is clicked on audio player...
 
 
 

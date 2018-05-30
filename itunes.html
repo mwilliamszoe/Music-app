@@ -12,15 +12,19 @@
 <body>
     <div class="container-fluid">
         <h1>Find your muse...</h1>
-                <form class="form-group row form-box" id="">
-                    <div class="col-10">
-                        <input class="form-control search-box" type="search" value="" id="search-box">
-                        <input class="btn search-btn" type="submit" value="Submit" id="">
-                    </div>
-                    <div class="search-results">
+            <audio class="player" controls src="">
+            <p>Your browser does not support the <code>audio</code> element.</p>
+            </audio>        
+            <form class="form-group row form-box" id="">
+                <div class="col-10">
+                    <input class="form-control search-box" type="search" value="" id="search-box">
+                    <input class="btn search-btn" type="submit" value="Submit" id="">
+                </div>
+                <div class="search-results"></div>
+            </form>
+            <p class="error"></p>
 
-                    </div>
-                </form>
+                
 
 
 

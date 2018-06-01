@@ -14,7 +14,8 @@ const error = document.querySelector('.error');
 
 formBox.addEventListener('submit', function (e) {
     e.preventDefault();
-    // console.log(searchBox.value);
+    display.textContent = ''
+    // console.log(searchBox.value, 'value');
     let userInput = searchBox.value;
     // console.log(userInput)
     let url = `https://itunes.apple.com/search?term=${userInput}`
@@ -35,32 +36,46 @@ formBox.addEventListener('submit', function (e) {
             // for (i=0; i<info.length; i++)
             // find a way to identify incorrect userInputs
             if (userInput === '' || userInput === '' || userInput === '' ) {
-                console.log('error')
+                // console.log('error')
                 error.textContent = 'Not Found'
             }
 
-            for (i=0; i<5; i++) {
+            for (i=0; i<3; i++) {
                 // console.log(info[i], "array of info")
                 // tracks is all the stuff inside the info array
                 let tracks = info[i]
                 // console.log(tracks, "tracks")
-                const searchList = 
+                let searchList = 
                 `
-                <div>
-                    <h4>Song: ${tracks.trackName}</h4>
-                    <h4>Listen: <button class='music-url'>${tracks.previewUrl}</button></h4>
+                <div class='searchList'>
+                    <h4>Artist: ${tracks.artistName}</h4>
+                    <img src="${tracks.artworkUrl100}" value="${tracks.previewUrl}">
+                    <h4>Listen:<button class='music-btn'>${tracks.previewUrl}</button></h4>
                 </div>
                 `
                 display.insertAdjacentHTML('beforeend', searchList)
                 
-            }
-            
-        }
-    )
-
+            }  
+        })
 }); 
 
-let music = document.querySelector('.music-url');
+// formBox.addEventListener('submit', function (e) {
+//     e.preventDefault();
+
+
+// }); 
+
+
+
+// let audioPlayer = document.querySelector('.audio-player')
+
+// document.querySelector('.searchList').addEventListener("click", function(e) {
+//     if (e.target && e.target.nodeName == "IMG") {
+//       audioPlayer.src = e.target.getAttribute("value")
+//     }
+//   })
+
+
 
 
 // when button is clicked audio player plays url from track

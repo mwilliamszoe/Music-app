@@ -5,23 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Itunes Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="itunes.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="itunes.css" />
 </head>
 
 <body>
     <div class="container-fluid">
-        <h1>Find your muse...</h1>
+        <h1 class="text-center">Find your muse...</h1>
+            
             <audio class="audio-player" controls src="">
-            <p>Your browser does not support the <code>audio</code> element.</p>
+                <p>Your browser does not support the <code>audio</code> element.</p>
             </audio>        
+            
             <form class="form-group row form-box" id="">
-                <div class="col-10">
+                <div class="search-box-div">
                     <input class="form-control search-box" type="search" value="" id="search-box" onfocus="this.value=''">
-                    <input class="btn search-btn" type="submit" value="Submit" id="">
                 </div>
-                <div class="search-results"></div>
+                <div class="search-btn-div">
+                    <input class="btn search-btn" type="submit" value="!!" id="">
+                </div>
             </form>
+            
+            <div class="search-results"></div>
+
             <p class="error"></p>
 
                 

@@ -47,10 +47,9 @@ formBox.addEventListener('submit', function (e) {
                 // console.log(tracks, "tracks")
                 let searchList = 
                 `
-                <div class='searchList'>
-                    <h4>Artist: ${tracks.artistName}</h4>
-                    <img src="${tracks.artworkUrl100}" value="${tracks.previewUrl}">
-                    <h4>Listen:<button class='music-btn'>${tracks.previewUrl}</button></h4>
+                <div class='search-list'>
+                    <p>Artist: ${tracks.artistName}</p>
+                    <p>Song: ${tracks.trackName}</p>
                 </div>
                 `
                 display.insertAdjacentHTML('beforeend', searchList)
@@ -59,13 +58,7 @@ formBox.addEventListener('submit', function (e) {
         })
 }); 
 
-// formBox.addEventListener('submit', function (e) {
-//     e.preventDefault();
-
-
-// }); 
-
-
+/* <h4>Listen:${tracks.previewUrl}</h4> */
 
 // let audioPlayer = document.querySelector('.audio-player')
 

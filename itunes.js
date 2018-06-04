@@ -44,19 +44,38 @@ formBox.addEventListener('submit', function (e) {
                 // console.log(info[i], "array of info")
                 // tracks is all the stuff inside the info array
                 let tracks = info[i]
-                // console.log(tracks, "tracks")
+                console.log(tracks, "tracks")
                 let searchList = 
                 `
                 <div class='search-list'>
-                    <p>Artist: ${tracks.artistName}</p>
-                    <p>Song: ${tracks.trackName}</p>
+                    <p class='artist'>${tracks.artistName}</p>
+                    <p class='song-title'>${tracks.trackName}</p>
+                    <p>Listen:<button class='song-btn'>${tracks.previewUrl}</button></p>
                 </div>
                 `
                 display.insertAdjacentHTML('beforeend', searchList)
                 
             }  
-        })
+            
+            // let songBtn = document.querySelectorAll('button')
+                // console.log(songBtn, "song")
+
+                // for (i=0; i<songBtn.length; i++) {
+                    // songBtn[i].addEventListener('click', function(e){
+                        // console.log(e)
+                        // let audioPlayer = document.querySelector('audio')
+                        // audioPlayer.src = songBtn[i].innerText;
+                        // console.log(i, 'song-btn')
+                    // })
+                    
+                // }
+                // console.log(i, "after the loop")
+        }) 
 }); 
+
+
+
+
 
 /* <h4>Listen:${tracks.previewUrl}</h4> */
 

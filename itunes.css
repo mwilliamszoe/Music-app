@@ -3,6 +3,7 @@
     background-size: cover;
 } */
 
+
 body::after {
     content: "";
     background: url('img/watercolor4.jpg') no-repeat center center fixed;
@@ -13,21 +14,86 @@ body::after {
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: -1;   
+    z-index: -1;  
+    filter: blur(1px); 
   }
 
   h1.text-center {
+    /* font-family: 'Great Vibes', cursive, sans-serif; */
+    /* font-family: 'Permanent Marker', cursive; */
+    font-family: 'Bad Script', cursive;
+
     color: white;
-    font-weight: bold;
+    font-weight: 900;
     text-shadow: 4px 4px 2px gray;
     padding: 10% 3%;
-    font-size: 9vw;
+    font-size: 15vw;
 }
 
 audio {
     width: 280px;
 }
 
-/* form.form-group.row.form-box {
-    margin-left: 1px;
-} */
+.search-box {
+    width: 75%;
+}
+
+.srch-btn-div {
+    width: 20%;
+    position: relative;
+    /* increase left postion to from -45 -60px */
+    left: -60px;
+    z-index: 1;
+    /* background-color: red; */
+    /* add height 30px */
+    height: 30px;
+}
+
+.fa-search {
+    position: relative;
+    z-index: 1;
+    /* change left from -15px to 20px */
+    left: 20px;
+    /* add top -32px */
+    top: -32px;
+}
+
+.search-box {
+    color: lightgray;
+    z-index: 1;
+    font-size: .8rem;
+    /* add width:100% */
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    margin-left: 10%;
+    
+}
+
+.form-control {
+    border-radius: 1rem;
+}
+
+.search-btn {
+    border-radius: 0;
+    opacity: 0;
+    z-index: 2;
+    /* add width: 50px */
+    width: 50px;
+}
+
+input#search-box.form-control.search-box {
+    /* comment out marginleft */
+    /* margin-left: 15%; */
+}
+
+.artist {
+    font-family: 'Bad Script', cursive;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+

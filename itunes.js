@@ -48,28 +48,34 @@ formBox.addEventListener('submit', function (e) {
                 let searchList = 
                 `
                 <div class='search-list'>
-                    <p class='artist'>${tracks.artistName}</p>
-                    <p class='song-title'>${tracks.trackName}</p>
-                    <p>Listen:<button class='song-btn'>${tracks.previewUrl}</button></p>
+                    <div class='song-info-div'>
+                        <p class='artist'>${tracks.artistName}</p>
+                        <p class='song-title'>${tracks.trackName}</p>
+                    </div>
+                    <div class='song-btn-div'>
+                        <button class='song-btn'></button>
+                        <i class="fas fa-music"></i>
+                    </div>
                 </div>
                 `
+                // ${tracks.previewUrl}
                 display.insertAdjacentHTML('beforeend', searchList)
                 
             }  
             
             // let songBtn = document.querySelectorAll('button')
-                // console.log(songBtn, "song")
+            //     console.log(songBtn, "song")
 
-                // for (i=0; i<songBtn.length; i++) {
-                    // songBtn[i].addEventListener('click', function(e){
-                        // console.log(e)
-                        // let audioPlayer = document.querySelector('audio')
-                        // audioPlayer.src = songBtn[i].innerText;
-                        // console.log(i, 'song-btn')
-                    // })
+            //     for (i=0; i<songBtn.length; i++) {
+            //         songBtn[i].addEventListener('click', function(e){
+            //             console.log(e, "Event")
+            //             let audioPlayer = document.querySelector('audio')
+            //             audioPlayer.src = songBtn[i].innerText;
+            //             console.log(i, 'song-btn')
+            //         })
                     
-                // }
-                // console.log(i, "after the loop")
+            //     }
+            //     console.log(i, "after the loop")
         }) 
 }); 
 

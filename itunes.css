@@ -1,8 +1,3 @@
-/* body {
-    background: url('img/watercolor4.jpg') ; 
-    background-size: cover;
-} */
-
 
 body::after {
     content: "";
@@ -32,6 +27,7 @@ body::after {
 
 audio {
     width: 280px;
+    margin-bottom: 15%;
 }
 
 .search-box {
@@ -41,20 +37,15 @@ audio {
 .srch-btn-div {
     width: 20%;
     position: relative;
-    /* increase left postion to from -45 -60px */
     left: -60px;
     z-index: 1;
-    /* background-color: red; */
-    /* add height 30px */
     height: 30px;
 }
 
 .fa-search {
     position: relative;
     z-index: 1;
-    /* change left from -15px to 20px */
     left: 20px;
-    /* add top -32px */
     top: -32px;
 }
 
@@ -77,23 +68,47 @@ audio {
     border-radius: 1rem;
 }
 
+.search-results {
+    margin-top: 5vh;
+}
+
 .search-btn {
-    border-radius: 0;
+    /* border-radius: 0; */
     opacity: 0;
     z-index: 2;
-    /* add width: 50px */
-    width: 50px;
+    width: 100px;
+    position: relative;
+    left: -25px;
 }
 
-input#search-box.form-control.search-box {
-    /* comment out marginleft */
-    /* margin-left: 15%; */
-}
-
-.artist {
+.song-info-div {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
     font-family: 'Bad Script', cursive;
     color: white;
-    font-weight: bold;
-    font-size: 1rem;
+    font-weight: 900;
+    text-shadow: 3px 3px 2px grey;
 }
 
+button.song-btn {
+    margin-left: 35%;
+    border-radius: 50%;
+    padding: 20px 20px;
+    border: 1px solid white;
+    background-color: #ffffff00;
+    z-index: 2;
+}
+
+.search-list {
+    margin-bottom: 15%;
+    border-radius: 3rem;
+}
+
+
+i.fas.fa-music {
+    position: relative;
+    left: -35px;
+    top: 5px;
+    color: #444444;
+}

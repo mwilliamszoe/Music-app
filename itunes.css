@@ -170,8 +170,18 @@ i.fas.fa-play {
 
 @media (min-width: 900px) {
 
-    h1.text-center {
-        
+    .fa-search {
+        top: 55px;
+        left: -112px;
+    }
+
+    .song-btn-div {
+        margin-top: 21px;
+        margin-left: 46px;
+    }
+
+    i.fas.fa-play {
+        font-size: 35px;
     }
 
 }

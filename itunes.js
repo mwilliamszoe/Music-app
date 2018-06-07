@@ -54,7 +54,7 @@ formBox.addEventListener('submit', function (e) {
                     </div>
                     <div class='song-btn-div'>
                         <button class='song-btn'></button>
-                        <i class="fas fa-music"></i>
+                        <i class="fas fa-play"></i>
                     </div>
                 </div>
                 `

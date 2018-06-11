@@ -44,7 +44,7 @@ formBox.addEventListener('submit', function (e) {
                 // console.log(info[i], "array of info")
                 // tracks is all the stuff inside the info array
                 let tracks = info[i]
-                console.log(tracks, "tracks")
+                // console.log(tracks, "tracks")
                 let searchList = 
                 `
                 <div class='search-list'>
@@ -53,32 +53,35 @@ formBox.addEventListener('submit', function (e) {
                         <p class='song-title'>${tracks.trackName}</p>
                     </div>
                     <div class='song-btn-div'>
-                        <button class='song-btn'></button>
-                        <i class="fas fa-play"></i>
+                        
+                        <button class='song-button'>${tracks.previewUrl}</i></button>
+                        <i class="fas fa-play">
                     </div>
                 </div>
                 `
-                // ${tracks.previewUrl}
+               
                 display.insertAdjacentHTML('beforeend', searchList)
                 
             }  
             
-            // let songBtn = document.querySelectorAll('button')
-            //     console.log(songBtn, "song")
-
-            //     for (i=0; i<songBtn.length; i++) {
-            //         songBtn[i].addEventListener('click', function(e){
-            //             console.log(e, "Event")
-            //             let audioPlayer = document.querySelector('audio')
-            //             audioPlayer.src = songBtn[i].innerText;
-            //             console.log(i, 'song-btn')
-            //         })
-                    
-            //     }
-            //     console.log(i, "after the loop")
+            let songBtn = document.querySelectorAll('.song-button')
+                // console.log('songBtn',songBtn)
+                for (i=0; i< songBtn.length; i++) {
+                    songBtn[i].addEventListener('click', function (e) {
+                        songURL = e.target.innerHTML
+                        // console.log('song url', songURL)
+                        // console.log('click')
+                        let audioPlayer = document.querySelector('audio')
+                        audioPlayer.src = songURL
+                        // console.log('ap src',audioPlayer.src)
+                        console.log('source', audioPlayer.src)
+                    })
+                } 
         }) 
 }); 
 
+/* <button class='song-button'><i class="fas fa-play">${tracks.previewUrl}</i></button>
+ */
 
 
 

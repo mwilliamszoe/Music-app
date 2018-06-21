@@ -53,9 +53,8 @@ formBox.addEventListener('submit', function (e) {
                         <p class='song-title'>${tracks.trackName}</p>
                     </div>
                     <div class='song-btn-div'>
-                        
-                        <button class='song-button'>${tracks.previewUrl}</i></button>
-                        <i class="fas fa-play">
+                        <button class='song-button'>${tracks.previewUrl}</button>
+                        <i class="fas fa-play"></i>
                     </div>
                 </div>
                 `
@@ -65,6 +64,7 @@ formBox.addEventListener('submit', function (e) {
             }  
             
             let songBtn = document.querySelectorAll('.song-button')
+            
                 // console.log('songBtn',songBtn)
                 for (i=0; i< songBtn.length; i++) {
                     songBtn[i].addEventListener('click', function (e) {
@@ -80,61 +80,3 @@ formBox.addEventListener('submit', function (e) {
         }) 
 }); 
 
-/* <button class='song-button'><i class="fas fa-play">${tracks.previewUrl}</i></button>
- */
-
-
-
-
-/* <h4>Listen:${tracks.previewUrl}</h4> */
-
-// let audioPlayer = document.querySelector('.audio-player')
-
-// document.querySelector('.searchList').addEventListener("click", function(e) {
-//     if (e.target && e.target.nodeName == "IMG") {
-//       audioPlayer.src = e.target.getAttribute("value")
-//     }
-//   })
-
-
-
-
-// when button is clicked audio player plays url from track
-// when 'play' button is clicked on audio player...
-
-
-
-
-
-// this is the text box
-// let searchBoxOne = document.querySelector('.search-box')
-// let searchBoxTwo = document.getElementById('#search-box')
-
-// let userInput = searchBox.value
-
-
-
-
-// formBox.addEventListener('submit', function (e) {
-
-//     //prevent the normal submission of the form
-//     e.preventDefault();
-
-//     console.log(searchBoxOne);    
-// });
-
-
-/* <form class="pure-form">
-    <input id="name" type="text" placeholder="Enter Name" />
-    <button type="submit"><i class="fa fa-chevron-circle-right"></i></button>
-</form> */
-
-// var nameInput = document.getElementById('name');
-
-// document.querySelector('form.pure-form').addEventListener('submit', function (e) {
-
-//     //prevent the normal submission of the form
-//     e.preventDefault();
-
-//     console.log(nameInput.value);    
-// });

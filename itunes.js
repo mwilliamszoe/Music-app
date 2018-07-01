@@ -19,7 +19,8 @@ formBox.addEventListener('submit', function (e) {
     let userInput = searchBox.value;
     // console.log(userInput)
     // let url = `https://itunes.apple.com/search?term=${userInput}`
-    let url = `http://localhost:8080/itunes.apple.com/search?term=${userInput}`
+//     let url = `http://localhost:8080/itunes.apple.com/search?term=${userInput}`
+    let url = `https://cors-anywhere.herokuapp.com/itunes.apple.com/search?term=${userInput}`
     // console.log(url, "url")
      
     fetch(url)

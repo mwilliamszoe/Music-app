@@ -173,6 +173,10 @@ button.song-button {
 
 @media (min-width: 900px) {
 
+    audio.audio-player {
+        margin-left: 112px;
+    }
+
     .fa-search {
         top: 40px;
         left: -112px;

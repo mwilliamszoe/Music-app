@@ -35,7 +35,7 @@ formBox.addEventListener('submit', function (e) {
             let info = data.results
                 // console.log(info, "info")
             // find a way to identify incorrect userInputs
-            if (userInput === '' || userInput === '' || userInput === '' ) {
+            if (userInput === '') {
                 // console.log('error')
                 error.textContent = 'Not Found'
             }

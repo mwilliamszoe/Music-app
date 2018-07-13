@@ -1,20 +1,12 @@
-
-body::after {
-    content: "";
+body {
     background: url('img/watercolor4.jpg') no-repeat center center fixed;
     background-size: cover;
-    opacity: 0.75;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1; 
-  }
+}
 
-  h1.text-center {
+
+
+h1.text-center {
     font-family: 'Bad Script', cursive;
-
     color: white;
     font-weight: 900;
     text-shadow: 4px 4px 2px gray;
@@ -82,10 +74,9 @@ audio {
     font-family: 'Bad Script', cursive;
     color: white;
     font-weight: 900;
-    text-shadow: 4px 4px 4px #0d0e0e;
+    text-shadow: 3px 3px 3px #0d0e0e;
     margin-bottom: -17px;
 }
-
 
 p {
     margin-top: .5rem;
@@ -102,7 +93,7 @@ i.fas.fa-play {
     position: relative;
     left: 27%;
     top: 4px;
-    color: rgba(0,0,0,.9);
+    color: rgba(0, 0, 0, .9);
     font-size: 10px;
 }
 
@@ -117,47 +108,79 @@ button.song-button {
     border-color: #1d2124;
 }
 
-@media (min-width: 676px) {
-    
+@media screen and (min-width: 374px) {
+    i.fas.fa-play {
+        position: relative;
+        left: 28.5%;
+    }
+}
+
+@media screen and (min-width: 424px) {
+    i.fas.fa-play {
+        position: relative;
+        left: 29.5%;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    i.fas.fa-play {
+        position: relative;
+        left: 33.5%;
+    }
+}
+
+@media screen and (min-width: 1023px) {
     h1.text-center {
-      color: white;
-      font-size: 12vw;
+        font-size: 12vw;
     }
 
-    audio {
-        width: 75%;
-        margin: 6px 1px 1px 83px;
-    }
-
-
-    input#search-box{
-        margin-top: 60px;
-        height: 6vh;
-        border-radius: 3rem;
-    }
-
-    .search-box {
-        font-size: 1.7rem;
-    }
-
-    .search-btn {
-        margin-top: 70px;
+    audio.audio-player {
+        margin-left: 138px;
     }
 
     .fa-search {
-        font-size: 1.3rem;
-        top: -37px;
-        left: -6px;
+        position: relative;
+        left: -79px;
+        top: -1px;
+    }
+    .song-info-div {
+        font-size: 2.5rem;
+        color: white;
+    }
+    button.song-button {
+        left: 43%;
+    }
+    i.fas.fa-play {
+        left: 39.5%;
+    }
+}
+
+@media screen and (min-width: 1439px){
+    h1.text-center {
+        font-size: 9rem;
     }
 
-    .search-list {
-        width: 56%;
-        margin-left: 151px;
+    audio.audio-player {
+        margin-left: 139px;
+    }
+
+    input#search-box {
+        padding: 15px;
+        border-radius: 50rem;
+    }
+
+    /* i.fas.fa-search {
         font-size: 1.5rem;
+        top: 10px;
+        left: -99px;
+    } */
+
+    i.fas.fa-search {
+        font-size: xx-large;
     }
 
-    p.artist, p.song-title {
-        font-size: 2rem;
+    .song-info-div {
+        font-weight: bold;
     }
 
     button.song-button {
@@ -166,36 +189,8 @@ button.song-button {
     }
 
     i.fas.fa-play {
-        font-size: 13px;
+        left: 40.2%;
+        font-size: .8rem;
     }
-
-}
-
-@media (min-width: 900px) {
-
-    audio.audio-player {
-        margin-left: 112px;
-    }
-
-    .fa-search {
-        top: 40px;
-        left: -112px;
-    }
-
-    p.artist, p.song-title {
-        font-size: 2.5rem;
-    }
-
-    button.song-button {
-        width: 85px;
-        height: 85px;
-        margin: 8px 0px 10px 0px;
-    }
-
-   i.fas.fa-play {
-    font-size: 20px;
-    left: 154px;
-    }
-
 
 }

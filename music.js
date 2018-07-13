@@ -34,7 +34,6 @@ formBox.addEventListener('submit', function (e) {
             // info is the array of data.results
             let info = data.results
                 // console.log(info, "info")
-            // for (i=0; i<info.length; i++)
             // find a way to identify incorrect userInputs
             if (userInput === '' || userInput === '' || userInput === '' ) {
                 // console.log('error')
@@ -43,7 +42,7 @@ formBox.addEventListener('submit', function (e) {
 
             for (i=0; i<3; i++) {
                 // console.log(info[i], "array of info")
-                // tracks is all the stuff inside the info array
+                // tracks is everything inside the info array
                 let tracks = info[i]
                 // console.log(tracks, "tracks")
                 let searchList = 

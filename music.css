@@ -1,9 +1,21 @@
 body {
     background: url('img/watercolor4.jpg') no-repeat center center fixed;
     background-size: cover;
+    /* opacity: 0.8; */
 }
 
-
+/* body::after {
+    content: "";
+    background: url('img/watercolor4.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+  } */
 
 h1.text-center {
     font-family: 'Bad Script', cursive;
@@ -133,11 +145,6 @@ button.song-button {
     h1.text-center {
         font-size: 12vw;
     }
-
-    audio.audio-player {
-        margin-left: 138px;
-    }
-
     .fa-search {
         position: relative;
         left: -79px;
@@ -160,23 +167,15 @@ button.song-button {
         font-size: 9rem;
     }
 
-    audio.audio-player {
-        margin-left: 139px;
-    }
-
     input#search-box {
         padding: 15px;
         border-radius: 50rem;
     }
 
-    /* i.fas.fa-search {
+    i.fas.fa-search {
         font-size: 1.5rem;
         top: 10px;
         left: -99px;
-    } */
-
-    i.fas.fa-search {
-        font-size: xx-large;
     }
 
     .song-info-div {
@@ -193,4 +192,5 @@ button.song-button {
         font-size: .8rem;
     }
 
+    /* fix font size in search bar */
 }
